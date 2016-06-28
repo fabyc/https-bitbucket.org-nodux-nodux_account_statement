@@ -15,10 +15,9 @@ from trytond.modules.company import CompanyReport
 from trytond.tools import reduce_ids
 
 __all__ = ['Statement']
-__metaclass__ = PoolMeta
 
 class Statement():
-    'Account Statement'
+    __metaclass__ = PoolMeta
     __name__ = 'account.statement'
 
     @classmethod
@@ -42,4 +41,3 @@ class Statement():
         statement, = statements
         res['start_balance'] = Decimal(0.0)
         return res
-
