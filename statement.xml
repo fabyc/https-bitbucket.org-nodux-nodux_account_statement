@@ -8,7 +8,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="model">account.statement</field>
             <field name="report_name">account.statement</field>
             <field name="report">nodux_account_statement/statement.odt</field>
-            <field name="style"></field>
         </record>
     </data>
 </tryton>

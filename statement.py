@@ -26,18 +26,16 @@ class Statement():
 
     @fields.depends('journal', 'state', 'lines')
     def on_change_journal(self):
-        res = {}
         if not self.journal:
-            return res
-
-        statements = self.search([
-                ('journal', '=', self.journal.id),
-                ], order=[
-                ('date', 'DESC'),
-                ], limit=1)
-        if not statements:
-            return res
-
-        statement, = statements
-        res['start_balance'] = Decimal(0.0)
-        return res
+            pass
+        else:
+            statements = self.search([
+                    ('journal', '=', self.journal.id),
+                    ], order=[
+                    ('date', 'DESC'),
+                    ], limit=1)
+            if not statements:
+                pass
+            else:
+                statement, = statements
+                self.start_balance = Decimal(0.0)
