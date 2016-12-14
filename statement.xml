@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.report" id="account_statement.report_statement">
+            <field name="name">Statement</field>
+            <field name="model">account.statement</field>
+            <field name="report_name">account.statement</field>
+            <field name="report">nodux_account_statement/statement.odt</field>
+            <field name="style"></field>
+        </record>
+    </data>
+</tryton>
