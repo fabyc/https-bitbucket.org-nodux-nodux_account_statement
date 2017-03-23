@@ -42,4 +42,3 @@ class Statement():
         statement, = statements
         res['start_balance'] = Decimal(0.0)
         return res
-
